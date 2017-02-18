@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AnswerBluetoohPhone</string>
+    <string name="font_avenir_black">Avenir-Black.ttf</string>
+    <string name="font_Avenir_Book">Avenir-HeavyOblique.ttf</string>
 </resources>
