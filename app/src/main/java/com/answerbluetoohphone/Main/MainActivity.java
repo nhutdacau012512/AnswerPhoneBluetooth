@@ -5,8 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 
 import com.answerbluetoohphone.Base.BaseActivity;
-import com.answerbluetoohphone.Base.BaseFragment;
 import com.answerbluetoohphone.R;
+
+import java.util.concurrent.TimeUnit;
+
+import io.reactivex.Observable;
 
 public class MainActivity extends BaseActivity {
 
@@ -18,9 +21,18 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         fragment = getSupportFragmentManager().findFragmentById(R.id.MainActivity_FrameLayout_MainContent);
-        fragment = new MainFragment();
+        fragment = new SplashFragment();
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.MainActivity_FrameLayout_MainContent, fragment);
         ft.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (fragment instanceof SplashFragment) {
+            Observable.timer(1000, TimeUnit.MILLISECONDS).subscribe(aLong -> ((SplashFragment) fragment).checkBluetooth());
+
+        }
     }
 }

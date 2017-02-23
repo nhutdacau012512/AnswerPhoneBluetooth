@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/bg_boder_white"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/dialogMessage_TextView_Title"
+        android:layout_marginTop="@dimen/_15dp"
+        android:text="Title"
+        android:textSize="@dimen/_17dp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/dialogMessage_TextView_message"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:text="Sorry the password you have entered is invalid. Please try again."
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_7dp"
+        android:textSize="@dimen/_15dp"
+        android:textColor="@android:color/black"
+        android:layout_width="@dimen/_245dp"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_marginTop="@dimen/_15dp"
+        android:background="@color/line_gray"
+        android:layout_width="match_parent"
+        android:layout_height="2px"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp">
+        <TextView
+            android:id="@+id/dialogMessage_Button_Cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textSize="@dimen/_20dp"
+            android:textColor="@color/text_blue"
+            android:gravity="center"
+            android:layout_height="match_parent"/>
+        <FrameLayout
+            android:background="@color/line_gray"
+            android:layout_width="2px"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/dialogMessage_Button_OK"
+            android:layout_width="0dp"
+            android:textColor="@color/text_blue"
+            android:text="OK"
+            android:gravity="center"
+            android:textSize="@dimen/_20dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>
