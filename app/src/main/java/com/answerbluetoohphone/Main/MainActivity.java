@@ -27,12 +27,4 @@ public class MainActivity extends BaseActivity {
         ft.commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        if (fragment instanceof SplashFragment) {
-            Observable.timer(1000, TimeUnit.MILLISECONDS).subscribe(aLong -> ((SplashFragment) fragment).checkBluetooth());
-
-        }
-    }
 }
